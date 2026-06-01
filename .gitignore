@@ -12,6 +12,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.ipynb_checkpoints/
 
 # Local environments
 .venv/
@@ -19,20 +20,18 @@ venv/
 env/
 .env
 
-# Superseded by requirements.txt
+# Superseded or local-only files
 f1_pitnextlap_requirements.txt
-
-# Superseded by REPORT.md
-docs/
-
-# Local export bundles; contents are committed as normal files instead.
 reports.zip
+docs/
+*.docx
 
 # Kaggle data should be downloaded locally, not committed.
-data/*
-!data/README.md
+data/*.csv
+data/original/
 
-# Generated predictions, trained models, and large experiment outputs.
+# Generated predictions, submissions, trained models, and large experiment outputs.
+submission.csv
 submission*.csv
 *_submission.csv
 *.cbm
@@ -40,42 +39,6 @@ submission*.csv
 *.joblib
 *.parquet
 
+# Existing compact run summaries already tracked by git remain tracked.
+# New/untracked run artifacts are ignored because many are large generated files.
 runs/*
-
-# Keep only compact run summaries that explain the modeling path.
-!runs/f1_stage2_ensemble/
-runs/f1_stage2_ensemble/*
-!runs/f1_stage2_ensemble/baseline_cv_summary.json
-!runs/f1_stage2_ensemble/ab_selected_cv_summary.json
-!runs/f1_stage2_ensemble/selected_features_after_ab.txt
-!runs/f1_stage2_ensemble/feature_selection_report.csv
-!runs/f1_stage2_ensemble/engineered_feature_catalog.csv
-
-!runs/f1_lgbm_catboost_ensemble/
-runs/f1_lgbm_catboost_ensemble/*
-!runs/f1_lgbm_catboost_ensemble/lgbm_catboost_ensemble_summary.json
-!runs/f1_lgbm_catboost_ensemble/model_oof_score_report.csv
-!runs/f1_lgbm_catboost_ensemble/prediction_correlation_matrix.csv
-!runs/f1_lgbm_catboost_ensemble/best_ensemble_weights.json
-
-!runs/f1_weight_variants/
-runs/f1_weight_variants/*
-!runs/f1_weight_variants/weight_variant_summary.json
-!runs/f1_weight_variants/ensemble_weight_grid.csv
-!runs/f1_weight_variants/rank_blend_report.csv
-
-!runs/f1_xgb_three_model/
-runs/f1_xgb_three_model/*
-!runs/f1_xgb_three_model/xgb_three_model_run_summary.json
-!runs/f1_xgb_three_model/model_oof_score_report.csv
-!runs/f1_xgb_three_model/prediction_correlation_matrix.csv
-!runs/f1_xgb_three_model/best_three_model_weights.json
-
-!runs/f1_cat2000_next/
-runs/f1_cat2000_next/*
-!runs/f1_cat2000_next/next_step_run_summary.json
-!runs/f1_cat2000_next/model_oof_score_report.csv
-!runs/f1_cat2000_next/best_lgbm_catboost2000_weights.json
-
-# Binary notes are better converted to Markdown before committing.
-*.docx
