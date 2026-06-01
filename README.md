@@ -10,6 +10,8 @@ Competition page: https://www.kaggle.com/competitions/playground-series-s6e5/ove
 
 The full combined report is in `REPORT.md`. It includes the competition objective, column-level EDA, modeling work, results, interpretation, and a file inventory explaining what is included in GitHub and why.
 
+The Kaggle Notebook writing guide is in `notebooks/kaggle_notebook_guide.md`.
+
 Key local result:
 
 ```text
@@ -45,6 +47,8 @@ data/sample_submission.csv
 コンペページ: https://www.kaggle.com/competitions/playground-series-s6e5/overview
 
 一体型のレポートは `REPORT.md` にあります。コンペの目的、列ごとの EDA、実施したモデリング、結果、解釈、GitHub に入れるファイル一覧と理由をまとめています。
+
+Kaggle Notebook として書くためのガイドは `notebooks/kaggle_notebook_guide.md` にあります。
 
 主なローカル結果:
 
