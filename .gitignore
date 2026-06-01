@@ -25,6 +25,9 @@ f1_pitnextlap_requirements.txt
 # Superseded by REPORT.md
 docs/
 
+# Local export bundles; contents are committed as normal files instead.
+reports.zip
+
 # Kaggle data should be downloaded locally, not committed.
 data/*
 !data/README.md

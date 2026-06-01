@@ -1,0 +1,4 @@
+dataset,rows,columns,missing_cells,missing_pct,duplicate_rows
+train,439140,16,0,0.0,0
+test,188165,15,0,0.0,0
+sample_submission,188165,2,0,0.0,0
